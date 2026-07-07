@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GLOBAL HEALTH — Private Medical Insurance MGU &amp; TPA</title>
+<meta name="description" content="GLOBAL HEALTH is a managing general underwriter and third-party administrator specialising in high-end private medical insurance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --deep:#0F2B2E;          /* deep ocean slate — primary dark */
+  --deep-2:#123438;        /* panel variant */
+  --ivory:#F6F4EE;         /* light ground */
+  --paper:#FDFCF9;         /* card */
+  --ink:#1C2B2D;           /* body text on light */
+  --mist:#8FA6A4;          /* muted text on dark */
+  --brass:#B99A5F;         /* accent */
+  --brass-soft:rgba(185,154,95,.35);
+  --hairline:rgba(15,43,46,.14);
+  --hairline-dark:rgba(246,244,238,.14);
+  --display:'Cormorant Garamond', Georgia, serif;
+  --sans:'Instrument Sans', -apple-system, 'Segoe UI', sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--ivory);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+.eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--brass);font-weight:600}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.12}
+h2{font-size:clamp(34px,4.4vw,52px);letter-spacing:.01em}
+.lede{font-size:18px;color:rgba(28,43,45,.78);max-width:56ch}
+section{padding:110px 0}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .35s ease,border-color .35s ease;border-bottom:1px solid transparent}
+nav.scrolled{background:rgba(15,43,46,.92);backdrop-filter:blur(12px);border-bottom-color:var(--hairline-dark)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{font-family:var(--sans);font-weight:600;letter-spacing:.34em;font-size:15px;color:var(--ivory)}
+.logo em{font-style:normal;color:var(--brass)}
+.nav-links{display:flex;gap:36px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:rgba(246,244,238,.75)}
+.nav-links a{transition:color .25s}
+.nav-links a:hover{color:var(--brass)}
+@media(max-width:820px){.nav-links{display:none}}
+
+/* ---------- hero ---------- */
+header{position:relative;min-height:100vh;background:var(--deep);color:var(--ivory);display:flex;align-items:center;overflow:hidden}
+.meridians{position:absolute;right:-16vw;top:50%;transform:translateY(-50%);width:min(72vw,900px);height:min(72vw,900px);opacity:.5;pointer-events:none}
+.meridians svg{width:100%;height:100%;animation:slowspin 140s linear infinite;transform-origin:center}
+@keyframes slowspin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){
+  .meridians svg{animation:none}
+  .reveal{opacity:1;transform:none;transition:none}
+}
+.hero-inner{position:relative;z-index:2;padding:140px 0 120px}
+.hero-inner .eyebrow{display:block;margin-bottom:28px}
+.hero-inner h1{font-size:clamp(46px,6.4vw,86px);max-width:14ch;letter-spacing:.005em}
+.hero-inner h1 .accent{color:var(--brass);font-style:italic}
+.hero-sub{margin-top:32px;max-width:52ch;font-size:17px;color:rgba(246,244,238,.72)}
+.hero-cta{margin-top:48px;display:flex;gap:20px;flex-wrap:wrap}
+.btn{display:inline-block;padding:15px 34px;font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;border:1px solid var(--brass);transition:all .3s}
+.btn.solid{background:var(--brass);color:var(--deep)}
+.btn.solid:hover{background:transparent;color:var(--brass)}
+.btn.ghost{color:var(--ivory);border-color:rgba(246,244,238,.35)}
+.btn.ghost:hover{border-color:var(--brass);color:var(--brass)}
+.hero-foot{position:absolute;bottom:0;left:0;right:0;border-top:1px solid var(--hairline-dark)}
+.hero-foot .wrap{display:flex;gap:0;flex-wrap:wrap}
+.hero-foot .cell{flex:1 1 200px;padding:22px 28px 22px 0;font-size:13px;letter-spacing:.06em;color:var(--mist)}
+.hero-foot .cell b{display:block;color:var(--ivory);font-weight:600;letter-spacing:.14em;font-size:12px;text-transform:uppercase;margin-bottom:4px}
+.hero-foot .cell + .cell{border-left:1px solid var(--hairline-dark);padding-left:28px}
+@media(max-width:820px){.hero-foot{display:none}}
+
+/* ---------- statement ---------- */
+.statement{background:var(--ivory)}
+.statement .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:64px;align-items:start}
+.statement p.big{font-family:var(--display);font-size:clamp(26px,3vw,36px);line-height:1.4;color:var(--ink)}
+.statement p.big em{font-style:italic;color:var(--brass)}
+.statement .side{padding-top:8px}
+.statement-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:64px}
+@media(max-width:820px){.statement-grid{grid-template-columns:1fr;gap:32px}}
+
+/* ---------- dual pillars ---------- */
+.pillars{background:var(--deep);color:var(--ivory);padding:0}
+.pillars .grid{display:grid;grid-template-columns:1fr 1fr}
+.pillar{padding:100px 64px;position:relative}
+.pillar + .pillar{border-left:1px solid var(--hairline-dark)}
+.pillar .tag{font-family:var(--display);font-size:88px;line-height:1;color:transparent;-webkit-text-stroke:1px var(--brass-soft);display:block;margin-bottom:36px}
+.pillar h3{font-size:30px;margin-bottom:10px}
+.pillar .role{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--brass);margin-bottom:26px;font-weight:600}
+.pillar p{color:rgba(246,244,238,.72);font-size:15.5px;max-width:44ch}
+.pillar ul{list-style:none;margin-top:30px}
+.pillar li{padding:13px 0;border-top:1px solid var(--hairline-dark);font-size:14.5px;color:rgba(246,244,238,.85);letter-spacing:.02em}
+.pillar li::before{content:"—";color:var(--brass);margin-right:14px}
+@media(max-width:900px){.pillars .grid{grid-template-columns:1fr}.pillar + .pillar{border-left:none;border-top:1px solid var(--hairline-dark)}.pillar{padding:72px 32px}}
+
+/* ---------- capabilities ---------- */
+.caps-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:64px;flex-wrap:wrap}
+.caps-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--hairline);border-left:1px solid var(--hairline)}
+.cap{padding:40px 36px 48px;border-right:1px solid var(--hairline);border-bottom:1px solid var(--hairline);background:var(--paper);transition:background .3s}
+.cap:hover{background:#fff}
+.cap .glyph{width:34px;height:34px;margin-bottom:26px;color:var(--brass)}
+.cap h4{font-family:var(--sans);font-size:15px;font-weight:600;letter-spacing:.05em;margin-bottom:12px}
+.cap p{font-size:14px;color:rgba(28,43,45,.68)}
+@media(max-width:900px){.caps-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.caps-grid{grid-template-columns:1fr}}
+
+/* ---------- network ---------- */
+.network{background:var(--deep-2);color:var(--ivory)}
+.network .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:center}
+.network h2{color:var(--ivory)}
+.network .lede{color:rgba(246,244,238,.7)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--hairline-dark);border-left:1px solid var(--hairline-dark)}
+.stat{padding:34px 30px;border-right:1px solid var(--hairline-dark);border-bottom:1px solid var(--hairline-dark)}
+.stat .num{font-family:var(--display);font-size:46px;color:var(--brass);line-height:1}
+.stat .lbl{margin-top:10px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mist)}
+@media(max-width:900px){.network .wrap{grid-template-columns:1fr;gap:48px}}
+
+/* ---------- clients ---------- */
+.clients .row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--hairline)}
+.client{padding:44px 32px 44px 0}
+.client + .client{border-left:1px solid var(--hairline);padding-left:32px}
+.client .idx{font-family:var(--display);font-style:italic;color:var(--brass);font-size:20px;display:block;margin-bottom:16px}
+.client h4{font-family:var(--sans);font-size:15px;font-weight:600;letter-spacing:.04em;margin-bottom:10px}
+.client p{font-size:13.5px;color:rgba(28,43,45,.66)}
+@media(max-width:900px){.clients .row{grid-template-columns:1fr 1fr}.client{padding:32px 24px 32px 0}.client:nth-child(3){border-left:none;padding-left:0}}
+@media(max-width:560px){.clients .row{grid-template-columns:1fr}.client + .client{border-left:none;padding-left:0}}
+
+/* ---------- contact ---------- */
+.contact{background:var(--deep);color:var(--ivory);text-align:center;position:relative;overflow:hidden}
+.contact h2{color:var(--ivory);max-width:20ch;margin:0 auto}
+.contact h2 em{font-style:italic;color:var(--brass)}
+.contact .lede{margin:26px auto 46px;color:rgba(246,244,238,.7)}
+.contact .mail{font-family:var(--display);font-size:clamp(22px,3vw,32px);color:var(--brass);letter-spacing:.02em;border-bottom:1px solid var(--brass-soft);padding-bottom:6px;transition:border-color .3s}
+.contact .mail:hover{border-color:var(--brass)}
+
+/* ---------- footer ---------- */
+footer{background:var(--deep);color:var(--mist);border-top:1px solid var(--hairline-dark);padding:38px 0;font-size:12.5px;letter-spacing:.06em}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="#top">GLOBAL <em>HEALTH</em></a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#mgu">MGU</a>
+      <a href="#tpa">TPA</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#network">Network</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="meridians" aria-hidden="true">
+    <svg viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g stroke="#B99A5F" stroke-width="0.7" opacity="0.85">
+        <circle cx="400" cy="400" r="380"/>
+        <ellipse cx="400" cy="400" rx="380" ry="300"/>
+        <ellipse cx="400" cy="400" rx="380" ry="210"/>
+        <ellipse cx="400" cy="400" rx="380" ry="110"/>
+        <ellipse cx="400" cy="400" rx="300" ry="380"/>
+        <ellipse cx="400" cy="400" rx="210" ry="380"/>
+        <ellipse cx="400" cy="400" rx="110" ry="380"/>
+        <line x1="20" y1="400" x2="780" y2="400"/>
+        <line x1="400" y1="20" x2="400" y2="780"/>
+      </g>
+      <g fill="#B99A5F">
+        <circle cx="400" cy="20" r="3.5"/>
+        <circle cx="702" cy="167" r="2.5"/>
+        <circle cx="98" cy="633" r="2.5"/>
+        <circle cx="780" cy="400" r="3.5"/>
+      </g>
+    </svg>
+  </div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Managing General Underwriter · Third-Party Administrator</span>
+    <h1>Underwriting and administering <span class="accent">world-class</span> healthcare.</h1>
+    <p class="hero-sub">GLOBAL HEALTH is a specialist MGU and TPA dedicated to high-end private medical insurance — designing products on behalf of leading capacity providers, and delivering the claims and care experience their members deserve.</p>
+    <div class="hero-cta">
+      <a class="btn solid" href="#contact">Partner with us</a>
+      <a class="btn ghost" href="#about">Discover more</a>
+    </div>
+  </div>
+  <div class="hero-foot">
+    <div class="wrap">
+      <div class="cell"><b>Underwriting</b>Delegated authority for A-rated capacity</div>
+      <div class="cell"><b>Administration</b>End-to-end claims &amp; policy servicing</div>
+      <div class="cell"><b>Care access</b>Global direct-billing hospital network</div>
+      <div class="cell"><b>Members</b>24 / 7 multilingual concierge support</div>
+    </div>
+  </div>
+</header>
+
+<section class="statement" id="about">
+  <div class="wrap reveal">
+    <span class="eyebrow" style="display:block;margin-bottom:28px">Who we are</span>
+    <div class="wrap-inner" style="display:contents"></div>
+    <div class="statement-grid">
+      <p class="big">We sit at the centre of the private medical value chain — where <em>capital meets care</em>. As underwriter, we build sustainable portfolios for our capacity partners. As administrator, we stand beside every member at the moment of need.</p>
+      <div class="side">
+        <p class="lede">High-end medical insurance is a promise measured in outcomes, not policy wording. Our dual role as MGU and TPA means the team that designs and prices the product is the same team accountable for the claim, the hospital admission and the member's experience — a single line of responsibility from risk to recovery.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pillars" id="mgu">
+  <div class="grid">
+    <div class="pillar reveal">
+      <span class="tag">MGU</span>
+      <h3>Managing General Underwriter</h3>
+      <div class="role">For insurers &amp; reinsurers</div>
+      <p>We hold delegated underwriting authority on behalf of leading insurance and reinsurance partners, building profitable high-end medical portfolios with discipline and transparency.</p>
+      <ul>
+        <li>Product design &amp; pricing for IPMI and high-end domestic plans</li>
+        <li>Individual &amp; group risk selection and medical underwriting</li>
+        <li>Portfolio management, bordereaux &amp; capacity reporting</li>
+        <li>Reinsurance structuring and programme placement</li>
+        <li>Regulatory &amp; compliance support across markets</li>
+      </ul>
+    </div>
+    <div class="pillar reveal" id="tpa">
+      <span class="tag">TPA</span>
+      <h3>Third-Party Administrator</h3>
+      <div class="role">For members &amp; payers</div>
+      <p>We administer every stage of the member journey — from policy issuance to claims settlement — with the responsiveness expected at the top of the market.</p>
+      <ul>
+        <li>Claims adjudication, cost containment &amp; fraud control</li>
+        <li>Global direct-billing &amp; provider network management</li>
+        <li>Pre-authorisation, case management &amp; second medical opinion</li>
+        <li>Emergency assistance &amp; medical evacuation coordination</li>
+        <li>24/7 multilingual member concierge</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="capabilities">
+  <div class="wrap">
+    <div class="caps-head reveal">
+      <div>
+        <span class="eyebrow" style="display:block;margin-bottom:20px">Capabilities</span>
+        <h2>Built for the top of the market</h2>
+      </div>
+      <p class="lede" style="max-width:40ch">Six disciplines, one standard: institutional rigour delivered with private-client care.</p>
+    </div>
+    <div class="caps-grid reveal">
+      <div class="cap">
+        <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+        <h4>Delegated underwriting</h4>
+        <p>Binding authority exercised with actuarial discipline, clean data and full transparency to capacity partners.</p>
+      </div>
+      <div class="cap">
+        <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 19V5m0 14h16M8 15l3-4 3 2 4-6"/></svg>
+        <h4>Portfolio analytics</h4>
+        <p>Loss-ratio monitoring, medical trend analysis and pricing feedback loops that keep books sustainable.</p>
+      </div>
+      <div class="cap">
+        <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg>
+        <h4>Global provider network</h4>
+        <p>Direct-billing access to leading hospitals and clinics worldwide, with negotiated tariffs and quality oversight.</p>
+      </div>
+      <div class="cap">
+        <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 6h16v12H4z"/><path d="M4 10h16M9 14h6"/></svg>
+        <h4>Claims excellence</h4>
+        <p>Fast, fair adjudication with rigorous cost containment — settled in days, not weeks, at every benefit level.</p>
+      </div>
+      <div class="cap">
+        <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg>
+        <h4>Case management</h4>
+        <p>Clinical teams coordinating admissions, treatment pathways and evacuation when the stakes are highest.</p>
+      </div>
+      <div class="cap">
+        <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1.5-3.5 4-5 7-5s5.5 1.5 7 5"/></svg>
+        <h4>Member concierge</h4>
+        <p>Round-the-clock multilingual support that treats every member as a private client, not a policy number.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="network" id="network">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" style="display:block;margin-bottom:20px">Reach</span>
+      <h2>A single standard, wherever care is needed</h2>
+      <p class="lede" style="margin-top:24px">Our members live, work and travel across borders. Our provider relationships, assistance partners and service teams follow them — from London to Hong Kong, Singapore to Dubai — so that world-class treatment is never more than a phone call away.</p>
+    </div>
+    <div class="stats reveal">
+      <div class="stat"><div class="num">190+</div><div class="lbl">Countries of cover</div></div>
+      <div class="stat"><div class="num">1M+</div><div class="lbl">Network providers</div></div>
+      <div class="stat"><div class="num">24/7</div><div class="lbl">Assistance &amp; concierge</div></div>
+      <div class="stat"><div class="num">A-rated</div><div class="lbl">Capacity partners</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="clients">
+  <div class="wrap">
+    <div class="reveal" style="margin-bottom:56px">
+      <span class="eyebrow" style="display:block;margin-bottom:20px">Who we serve</span>
+      <h2>Partners across the value chain</h2>
+    </div>
+    <div class="row reveal">
+      <div class="client">
+        <span class="idx">i.</span>
+        <h4>Insurers &amp; reinsurers</h4>
+        <p>Profitable access to the high-end medical segment through disciplined delegated authority.</p>
+      </div>
+      <div class="client">
+        <span class="idx">ii.</span>
+        <h4>Brokers &amp; advisers</h4>
+        <p>Distinctive products, responsive underwriting and service their clients will thank them for.</p>
+      </div>
+      <div class="client">
+        <span class="idx">iii.</span>
+        <h4>Corporates</h4>
+        <p>Group medical programmes for executives and internationally mobile employees.</p>
+      </div>
+      <div class="client">
+        <span class="idx">iv.</span>
+        <h4>Private clients</h4>
+        <p>Individuals and families who expect the best of global medicine, without friction.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap reveal">
+    <span class="eyebrow" style="display:block;margin-bottom:26px">Contact</span>
+    <h2>Let's build something <em>enduring</em></h2>
+    <p class="lede">Whether you bring capacity, distribution or a scheme to administer, we would be glad to talk.</p>
+    <a class="mail" href="mailto:info@globalhealthgroup.co.uk">info@globalhealthgroup.co.uk</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 GLOBAL HEALTH. All rights reserved.</div>
+    <div>Managing General Underwriter · Third-Party Administrator · High-End Medical</div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>{nav.classList.toggle('scrolled',scrollY>40)},{passive:true});
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
